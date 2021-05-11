@@ -1,0 +1,404 @@
+/* Font Import*/
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('./Fonts/kollektif-cufonfonts-webfont/Kollektif.woff');
+@import url('./Fonts/Montserrat/Montserrat-SemiBold.ttf');
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Facebook */
+.fa-facebook {
+background: blue;
+color: white;
+}
+
+/* Twitter */
+.fa-linkedin {
+background: #55ACEE;
+color: white;
+}
+
+/*Instagram*/
+.fa-twitter {
+background: #F5F8FA;
+color:  #1DA1F2;
+}
+
+.fa {
+padding: 10px;
+font-size: 20px;
+width: 40px;
+text-align: center;
+text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin-bottom: 0;
+}
+.lol{
+    text-align: center;
+    height: auto;
+    width: auto;
+}
+.ton{
+    max-height: 500px;
+    max-width: 100%;
+    background: darkred;
+}
+.text{
+    width: 100%;
+    max-height: 950px;
+    filter: brightness(70%);
+}
+
+
+@media only screen and (max-width: 480px) {
+    .text{
+      width: 100%;
+      height: auto;
+    }
+}
+.bg-light{
+    background-color: white !important;
+}
+
+
+.centered {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: auto;
+}
+/*Text*/
+p{
+  color: black;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+}
+h1{
+    font-size: 100px;
+    font-family: 'Kollektif Regular';
+    color: white;
+}
+@media only screen and (max-width:1080px){
+    h1{
+        font-size: 40px;
+    }
+}
+h2{
+    font-size: 50px;
+    color: white;
+    font-family: 'Kollektif Regular';
+
+    
+}
+@media only screen and (max-width:1080px){
+    h2{
+        font-size: 30px;
+    }
+}
+.red{
+    max-height: 140px;
+    max-width: 140px;
+    height: auto;
+    width: auto;
+}
+@media only screen and (max-width:1080px){
+    .red{
+        max-height: 40px;
+        max-width: 40px;
+    }
+}
+
+.loot{
+    text-align: center;
+    max-height: 500px;
+    max-width: 100%;
+    background:white;
+}
+
+.fun{
+    text-align: center;
+    max-height: 500px;
+    max-width: 100%;
+    background:darkblue; 
+}
+/*Cards*/
+.grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, 22rem);
+  gap: 6rem;
+}
+
+.item {
+  position: relative;
+  height: 26rem;
+  overflow-y: hidden;
+  background: #0b0a59;
+  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+}
+.item h3 {
+  margin: 0;
+  display: block;
+  background-color: #7bb3ff;
+  padding: 1rem;
+}
+.item a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.item a:hover ~ .item__overlay, .item a:focus ~ .item__overlay {
+  transform: translate3d(0, 0, 0);
+  background-color: #0b0a59;
+  margin-top: 65%;
+}
+.imgs {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.item__overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  transition: transform 300ms;
+  background-color: #0b0a59;
+  transform: translate3d(0, calc(100% - 3.5rem), 0);
+}
+.item__body {
+  flex-grow: 1;
+  padding: 1rem;
+}
+.item__body p {
+  margin: 0;
+}
+
+/*Marigns Paragraph*/
+.block{
+  max-width: 800px;
+  text-align: left;
+  line-height: 50px;
+  background-color: #f6f6f6;
+  border-radius: 8px;
+}
+
+.imgz{
+ max-height: 900px;
+ width: 100%;
+}
+
+@media only screen and(max-width:1080px){
+  .imgz{
+    height: auto;
+    width: auto;
+  }
+}
+
+.logo{
+  max-width: 150px;
+  max-height: 150px;
+}
+
+@media only screen and(max-width:1080px){
+  .logo{
+    height: auto;
+    width: auto;
+  }
+}
+
+.hey{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border-radius: 120px 20px 120px 20px;
+}
+
+.heyz{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border-radius: 120px 20px 120px 20px;
+  width:100%;
+  height: auto;
+}
+
+@media only screen and(max-width:1080px){
+    .heyz{
+     object-fit: scale-down;
+    }
+}
+
+
+.imgz{
+  object-fit: fill;
+}
+
+.nav-link{
+  font-weight: bolder;
+}
+
+.nav-link:hover{
+  color: #0b0a59 !important;
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.img-overlay:before {
+  content: ' ';
+  display: block;
+  /* adjust 'height' to position overlay content vertically */
+  height: 65%; 
+}
+
+.orange{
+  background-color: #7bb3ff;
+  border: none;
+  color:white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 28px;
+  margin: 4px 2px;
+  opacity: 90%;
+  font-family: 'Kollektif Regular';
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.orange:hover{
+  color: white;
+  background-color: #0b0a59;
+  text-decoration: none;
+  border: 4px solid white;
+  opacity: 90%;
+}
+
+@media only screen and(max-width:1080px) {
+  .orange{
+    margin-bottom: 90%;
+  }  
+}
+
+.career{
+  text-align: center;
+}
+
+.heads{
+  max-width: 800px;
+  text-align: left;
+}
+
+.sup{
+  max-width: 600px;
+}
+
+.boxes{
+  background-color: #f6f6f6;
+  border-radius: 8px;
+  max-height: auto;
+  max-width: 650px;
+  padding-bottom: 10px;
+}
+
+.case{
+  max-height: auto;
+  max-width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border-radius: 120px 20px 120px 20px;
+  width:100%;
+  height: auto;
+}
+/*banner*/
+.rumple{
+  background-image: url(./image/banner-publicaffairs.jpg); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 400px;
+}
+
+.rumple2{
+  background-image: url(./image/rumple2.jpg); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 400px;
+}
+
+.rumple3{
+  background-image: url(./image/rumple3.jpg); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 400px;
+}
+
+.rumple4{
+  background-image: url(./image/rumple4.jpg); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 400px;
+}
+
+.rumple5{
+  background-image: url(./image/rumple5.jpg); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 400px;
+}
+
+.rumple6{
+  background-image: url(./image/rumple7.png); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 400px;
+}
+
+.rumple7{
+  background-image: url(./image/rumple6.jpg); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 400px;
+}
+
+.rumple8{
+  background-image: url(./image/rumple8.jpeg); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 400px;
+}
+
+.rumple9{
+  background-image: url(./image/rumple9.jpg); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 400px;
+}
