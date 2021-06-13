@@ -6,6 +6,10 @@
     opacity: 0.7;
 }
 
+body {
+  margin-bottom: 0;
+}
+
 /* Facebook */
 .fa-facebook {
 background: blue;
@@ -197,14 +201,25 @@ h2{
 }
 
 .imgz{
- max-height: 900px;
- width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  filter: blur(8px);
+
+  /* edge blur workaround */
+  transform: scale(1.10);
 }
 
 @media only screen and(max-width:1080px){
   .imgz{
-    height: auto;
-    width: auto;
+    left: 50%;
+    margin-left: -512px;
   }
 }
 
@@ -224,14 +239,14 @@ h2{
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
-  border-radius: 120px 20px 120px 20px;
+  border-radius: 120px 120px 120px 120px;
 }
 
 .heyz{
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
-  border-radius: 120px 20px 120px 20px;
+  border-radius: 120px 120px 120px 120px;
   width:100%;
   height: auto;
 }
@@ -242,9 +257,8 @@ h2{
     }
 }
 
-
-.imgz{
-  object-fit: fill;
+.nvsh {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 
 .nav-link{
@@ -255,21 +269,51 @@ h2{
   color: #0b0a59 !important;
 }
 
-.img-overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
+.mp-title {
+  font-family: 'Helvetica';
+
 }
 
-.img-overlay:before {
+.mp-sub {
+  font-family: 'Helvetica';
+  padding-bottom: 30px;
+}
+
+.mp-img {
+  padding: 0; margin: 0;
+  position: relative;
+  width : 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.img-overlay {
+  position: absolute;
+  margin: 0 auto;
+  width: 80%;
+  top: 45%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.4))
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  line-height: 60px;
+  background-color: #0b0a59;
+  margin-bottom: 0;
+}
+
+/* .img-overlay:before {
   content: ' ';
   display: block;
-  /* adjust 'height' to position overlay content vertically */
-  height: 65%; 
-}
+} */
 
 .orange{
   background-color: #7bb3ff;
@@ -305,11 +349,16 @@ h2{
 
 .heads{
   max-width: 800px;
+  padding-left: 0;
   text-align: left;
 }
 
 .sup{
-  max-width: 600px;
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  text-align: center;
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.4))
 }
 
 .boxes{
@@ -326,17 +375,67 @@ h2{
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
-  border-radius: 120px 20px 120px 20px;
+  border-radius: 120px 120px 120px 120px;
   width:100%;
   height: auto;
 }
+
+.officer-name {
+  font-family: Helvetica;
+  font-size: 30px;
+  color: #0b0a59;
+  font-weight: bold;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.officer-desc {
+  font-family: Helvetica;
+  color: #242358;
+}
+
+.big-section-title {
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 125px;
+}
+
+.huge-section-title {
+  color: #0b0a59;
+  font-family: Helvetica;
+  font-weight: bold;
+}
+
+.mgmt {
+  padding-bottom: 20px;
+}
+
+.section-title {
+  margin-left: 0px;
+  padding-top: 10px;
+  color: #0b0a59;
+  font-family: Helvetica;
+  font-weight: bold;
+  text-align: left;
+}
+
 /*banner*/
 .rumple{
+  position: relative;
   background-image: url(./image/banner-publicaffairs.jpg); 
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+
   min-height: 400px;
+  padding: 0; margin: 0;
+  position: relative;
+  width : 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .rumple2{
@@ -344,7 +443,16 @@ h2{
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+
   min-height: 400px;
+  padding: 0; margin: 0;
+  position: relative;
+  width : 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .rumple3{
@@ -352,7 +460,16 @@ h2{
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+
   min-height: 400px;
+  padding: 0; margin: 0;
+  position: relative;
+  width : 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .rumple4{
@@ -360,7 +477,16 @@ h2{
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+
   min-height: 400px;
+  padding: 0; margin: 0;
+  position: relative;
+  width : 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .rumple5{
@@ -368,7 +494,16 @@ h2{
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+
   min-height: 400px;
+  padding: 0; margin: 0;
+  position: relative;
+  width : 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .rumple6{
@@ -376,7 +511,16 @@ h2{
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+
   min-height: 400px;
+  padding: 0; margin: 0;
+  position: relative;
+  width : 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .rumple7{
@@ -384,7 +528,16 @@ h2{
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+
   min-height: 400px;
+  padding: 0; margin: 0;
+  position: relative;
+  width : 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .rumple8{
@@ -392,7 +545,16 @@ h2{
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+
   min-height: 400px;
+  padding: 0; margin: 0;
+  position: relative;
+  width : 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .rumple9{
@@ -400,5 +562,22 @@ h2{
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+
   min-height: 400px;
+  padding: 0; margin: 0;
+  position: relative;
+  width : 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#images-notifier {
+  padding-bottom: 20px;
+}
+
+.mpSub{
+  padding-bottom: 10%;
 }
